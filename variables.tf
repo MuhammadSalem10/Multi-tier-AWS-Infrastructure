@@ -39,3 +39,9 @@ variable "availability_zones" {
   type        = list(string)
   default     = ["us-east-1a", "us-east-1b"]
 }
+
+variable "allowed_cidr" {
+  description = "CIDR block allowed to access resources"
+  type        = string
+  default     = "0.0.0.0/0"
+}
