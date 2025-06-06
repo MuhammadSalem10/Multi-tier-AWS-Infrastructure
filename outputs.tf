@@ -18,3 +18,13 @@ output "alb_dns_name" {
   value       = module.compute.alb_dns_name
 }
 
+output "s3_bucket_name" {
+  description = "Name of the S3 bucket"
+  value       = module.database.s3_bucket_name
+}
+
+output "rds_endpoint" {
+  description = "Endpoint of the RDS instance"
+  value       = module.database.rds_endpoint
+}
+
