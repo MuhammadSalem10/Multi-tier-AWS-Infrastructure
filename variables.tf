@@ -45,3 +45,33 @@ variable "allowed_cidr" {
   type        = string
   default     = "0.0.0.0/0"
 }
+
+variable "instance_type" {
+  description = "EC2 instance type"
+  type        = string
+  default     = "t3.micro"
+}
+
+variable "key_name" {
+  description = "SSH key name"
+  type        = string
+  default     = "webapp-key"
+}
+
+variable "asg_max_size" {
+  description = "Maximum size of the auto scaling group"
+  type        = number
+  default     = 3
+}
+
+variable "asg_min_size" {
+  description = "Minimum size of the auto scaling group"
+  type        = number
+  default     = 1
+}
+
+variable "asg_desired_capacity" {
+  description = "Desired capacity of the auto scaling group"
+  type        = number
+  default     = 2
+}
